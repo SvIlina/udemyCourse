@@ -9,7 +9,7 @@ class BlogPage {
         this.recentPostsList = page.locator('#recent-posts-3 ul li')
     }
     async navigateToBlogPage () {
-        await this.page.goto('https://practice.sdetunicorns.com/blog/')
+        await this.page.goto('/blog/')
     }
 }
 export default BlogPage

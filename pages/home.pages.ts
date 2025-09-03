@@ -13,13 +13,13 @@ class HomePage {
         this.navLinksMenu = page.locator('#zak-primary-menu li[id*=menu]')
     }
     async navigate () {
-        await this.page.goto('https://practice.sdetunicorns.com/')
+        await this.page.goto('/')
     }
 
+    // eslint-disable-next-line require-await
     async getNavLinksText () {
         return this.navLinksMenu.allTextContents();
     }
-
 }
 
 export default HomePage

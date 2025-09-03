@@ -1,4 +1,4 @@
-import {Page, Locator } from '@playwright/test'
+import {Page } from '@playwright/test'
 import UploadComponent from './components/upload.comp';
 
 class CartPage {
@@ -11,6 +11,10 @@ class CartPage {
 
     uploadComponent() {
         return new UploadComponent(this.page);
+    }
+    
+    async navigateToCartPage () {
+        await this.page.goto("/cart/")
     }
 
 }

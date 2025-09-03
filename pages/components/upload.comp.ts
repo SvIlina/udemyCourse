@@ -15,7 +15,7 @@ constructor (page: Page) {
     }
 
     async uploadFile(filePath: string) {
-        await this.page.setInputFiles(this.uploadInput, filePath)
+        this.page.setInputFiles(this.uploadInput, filePath)
         await this.uploadSubmitButton.click()
     }
 }

@@ -27,5 +27,8 @@ class ContactPage {
         await (this.textArea).fill(notes)
         await this.submitButton.click()
     }
+    async navigateToContactPage () {
+        await this.page.goto('/contact/')
+    }
 }
 export default ContactPage
