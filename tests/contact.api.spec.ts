@@ -15,7 +15,7 @@ test('Fill contact and verify success message', async ({page}) => {
     contactPage = new ContactPage(page)
     await contactPage.navigateToContactPage()
     const user = await apiController.getUsers()
-    contactPage.submitForm(user.name, user.email, user.phone, user.website)
+    await contactPage.submitForm(user.name, user.email, user.phone, user.website)
 
     //add soft assertion
     //await expect.soft(contactPage.textArea).toHaveText("Fail test message")
